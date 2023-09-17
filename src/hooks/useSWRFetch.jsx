@@ -13,7 +13,7 @@ export default (url, options) => {
     url,
     async (fetchUrl) => {
       const res = await fetch(fetchUrl, {
-        // headers: { authorization: `Bearer ${accessToken}` }
+        //headers: { authorization: `Bearer ${accessToken}` }
       });
       // If the status code is not in the range 200-299,
       // we still try to parse and throw it.
@@ -50,9 +50,9 @@ export default (url, options) => {
     }
   );
   if (error) {
-    console.log(error);
+    console.log(error.message);
   }
-  // console.log(data);
+  //console.log(data);
 
   return { data, error };
 };

@@ -23,17 +23,17 @@ function SkillsForm() {
     // here is layout
     <div className="flex flex-col col-span-12 sm:col-span-6 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
       <form
-        className="p-6 px-8"
+        className="px-8 py-8"
         onSubmit={(e) => {
           e.preventDefault();
           postForm(studentId, skills);
         }}
       >
         <div className="mb-4">
-          <label className="mb-2">請輸入學號</label>
+          <label className="">請輸入學號</label>
           <input
             type="text"
-            className="w-full border rounded"
+            className="mt-4 w-full border rounded"
             value={studentId}
             onChange={(e) => setStudentId(e.target.value)}
           />
@@ -42,7 +42,7 @@ function SkillsForm() {
           <div className="" key={skill}>
             <label className="">{skill}</label>
             <select
-              className="border rounded"
+              className="border rounded ml-4 mb-4 mt-4"
               value={skills[skill]}
               onChange={(e) =>
                 handleSelectChange(skill, Number(e.target.value))
